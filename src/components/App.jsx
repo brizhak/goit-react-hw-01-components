@@ -10,7 +10,7 @@ import TransactionHistory from './TransactionHistory';
 
 const App = () => {
   return (
-    <main>
+    <>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -21,7 +21,7 @@ const App = () => {
       <Statistics title="Upload stats" stats={data} />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />
-    </main>
+    </>
   );
 };
 
