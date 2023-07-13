@@ -1,15 +1,16 @@
 import PropTypes from 'prop-types';
+import style from './FriendsList.module.css';
 
 const FriendList = ({ friends }) => {
   return (
-    <section className="friends">
-      <ul className="friends-list">
+    <section>
+      <h2 className={style.title}>Friends</h2>
+      <ul className={style.friendsList}>
         {friends.map(({ avatar, name, isOnline, id }) => {
           return (
-            <li key={id} className="item">
+            <li key={id}>
               {isOnline ? (
                 <span
-                  className="status"
                   style={{
                     width: '10px',
                     height: '10px',
@@ -20,7 +21,6 @@ const FriendList = ({ friends }) => {
                 ></span>
               ) : (
                 <span
-                  className="status"
                   style={{
                     width: '10px',
                     height: '10px',
@@ -31,12 +31,11 @@ const FriendList = ({ friends }) => {
                 ></span>
               )}
               <img
-                className="avatar"
                 src={avatar}
                 alt="User avatar"
                 width="48"
               />
-              <p className="name">{name}</p>
+              <p>{name}</p>
             </li>
           );
         })}
