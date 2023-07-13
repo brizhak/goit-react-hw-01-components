@@ -1,25 +1,24 @@
 table {
-    table-layout: fixed;
-    width: 100%;
-    text-align: center;
-    border-collapse: collapse;
-    border: 1.5px solid #454E4B;
-  }
-  
-  thead th:nth-child(1) {
-    width: 33%;
-  }
-  
-  thead th:nth-child(2) {
-    width: 33%;
-  }
-  
-  thead th:nth-child(3) {
-    width: 33%;
-  }
-  
+  table-layout: fixed;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  border: 1.5px solid #454E4B;
+}
 
- td {
- padding: 5px;
+thead th:nth-child(1) {
+  width: 33%;
+}
 
-  }
+thead th:nth-child(2) {
+  width: 33%;
+}
+
+thead th:nth-child(3) {
+  width: 33%;
+}
+
+td {
+  padding: 5px;
+
+}

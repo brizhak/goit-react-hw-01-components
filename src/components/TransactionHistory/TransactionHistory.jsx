@@ -7,9 +7,9 @@ const TransactionHistory = ({ items }) => {
       <table className={style.transactionHistory}>
         <thead>
           <tr className={style.tableHead}>
-            <th className="table-head-item">Type</th>
-            <th className="table-head-item">Amount</th>
-            <th className="table-head-item">Currency</th>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Currency</th>
           </tr>
         </thead>
 
@@ -17,9 +17,9 @@ const TransactionHistory = ({ items }) => {
           {items.map(({ id, type, amount, currency }) => {
             return (
               <tr key={id}  className={style.tableBody}>
-                <td className="table-body-item">{type}</td>
-                <td className="table-body-item">{amount}</td>
-                <td className="table-body-item">{currency}</td>
+                <td>{type}</td>
+                <td>{amount}</td>
+                <td>{currency}</td>
               </tr>
             );
           })}

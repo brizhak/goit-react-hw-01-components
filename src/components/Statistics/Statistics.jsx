@@ -8,10 +8,10 @@ const Statistics = ({ title, stats }) => {
         <ul className={style.statList}>
           {stats.map(({id, label, percentage}) => {
             return (
-              <li key={id} className="item">
-                <span className="label">{label}</span>
+              <li key={id}>
+                <span>{label}</span>
                 <br/>
-                <span className={style.percentage}>{percentage}%</span>
+                <span>{percentage}%</span>
               </li>
             );
           })}
