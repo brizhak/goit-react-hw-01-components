@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import FriendListItem from './FriendListItem';
 import style from './FriendsList.module.css';
 
 const FriendList = ({ friends }) => {
@@ -7,37 +8,7 @@ const FriendList = ({ friends }) => {
       <h2 className={style.title}>Friends</h2>
       <ul className={style.friendsList}>
         {friends.map(({ avatar, name, isOnline, id }) => {
-          return (
-            <li key={id}>
-              {isOnline ? (
-                <span
-                  style={{
-                    width: '10px',
-                    height: '10px',
-                    borderRadius: '50%',
-                    backgroundColor: 'green',
-                    display: 'inline-block',
-                  }}
-                ></span>
-              ) : (
-                <span
-                  style={{
-                    width: '10px',
-                    height: '10px',
-                    borderRadius: '50%',
-                    backgroundColor: 'red',
-                    display: 'inline-block',
-                  }}
-                ></span>
-              )}
-              <img
-                src={avatar}
-                alt="User avatar"
-                width="48"
-              />
-              <p>{name}</p>
-            </li>
-          );
+          return (<FriendListItem avatar={avatar} name={name} isOnline={isOnline} id={id}/>)
         })}
       </ul>
     </section>
